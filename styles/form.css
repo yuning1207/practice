@@ -1,0 +1,30 @@
+input
+{
+    font-family:"Helvetica","Arial",sans-serif;
+    background-color:#ADD8E6;
+     border-radius:5px;
+    color:#787878;
+}
+select
+{
+    font-family:"Helvetica","Arial",sans-serif;
+    color:#787878;
+}
+div
+{
+    display:inline;
+}
+select:hover
+{
+    font-weight:bold;
+}
+.Up
+{
+    font-weight:bold;
+    background-color:black;
+}
+.Off
+{
+    background-color:#D8D8D8;
+    font-weight:400;
+}

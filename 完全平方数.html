@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>完全平方数</title>
+        <style>
+            #question
+            {
+                background-color:#99CCFF;
+                font-family:sans-serif;
+                
+            }
+            #answer
+            {
+                background-color:#CCCCFF;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="question">一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
+        </p>
+        <p id="answer"></p>
+        <script>
+            function fun()
+            {
+                var n;
+                var i=0;
+                var x,y;
+                var xsum=new Array();
+                for(n=1;n<13;n++)
+                {
+                    y=84/n-n/2;
+                    var y1=Math.floor(y);
+                    if(y==y1)
+                    {
+                        x=y*y-100;
+                        xsum[i]=x;
+                        i++;
+                    }
+                }
+                document.getElementById("answer").innerHTML=xsum;
+            }
+            window.onload=fun;
+        </script>
+    </body>
+</html>

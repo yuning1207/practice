@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html", charset="utf-8"/>
+        <title>JSON3</title>
+    </head>
+    <body>
+        <p>
+            firstname: <span id="fname"></span><br/>
+            lastname: <span id="fphone"></span><br/>
+        </p>
+        <script>
+            var txt='{"employees":['+'{"firstname":"yu","lastname":"ning"},'+'{"firstname":"wang","lastname":"yi"},'+'{"firstname":"li","lastname":"er"}]}';
+            var obj=JSON.parse(txt);
+            document.getElementById("fname").innerHTML=obj.employees[0].firstname;
+            document.getElementById("fphone").innerHTML=obj.employees[0].lastname;
+        </script>
+    </body>
+</html>

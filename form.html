@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link media="screen" rel="stylesheet" href="styles/form.css"/>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="username" placeholder="用户名">
+            <input type="text" name="name" placeholder="姓名">
+            <div>
+            <select name="gender">
+                <option class="Off" onMouseOut="this.className="Off"" onMousemove="this.className="Up"" value="0" >男</option>
+                <option class="Off" onMouseOut="this.className="Off"" onMousemove="this.className="Up"" value="1">女</option>
+            </select>
+            </div>
+            <input type="text" name="phone" placeholder="手机号">
+            <input type="text" name="class_grade" placeholder="班级">
+            <div>
+            <select name="team">
+                <option class="Off" onMouseOut="this.className="Off"" onmousemove="this.className="Up"" value="windows">windows</option>"
+                <option class="Off" onMouseOut="this.className="Off"" onMousemove="this.className="Up"" value="web">web</option>
+                <option class="Off" onMouseOut="this.className="Off"" onMousemove="this.className="Up"" value="andriod">andriod</option>
+                <option class="Off" onMouseOut="this.className="Off"" onMousemove="this.className="Up"" value="ios">ios</option>
+            </select>
+            </div>
+            <input type="text" name="company" placeholder="公司">
+            <input type="text" name="stu_code" placeholder="学号">
+            <input type="reset" value="重置" />
+            <input type="submit" value="提交" />
+        </form>
+    </body>
+</html>

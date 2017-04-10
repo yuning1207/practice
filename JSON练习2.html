@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
+        <title>JSON2</title>
+    </head>
+    <body>
+        <p>
+            name: <span id="jname"></span><br/>
+            age: <span id="jage"></span><br/>
+            address: <span id="jaddress"></span><br/>
+            phone: <span id="jphone"></span><br/>
+        </p>
+        <script>
+            var JOSNobject={
+                "name":"yuning",
+                "age":20,
+                "address":"xian",
+                "phone":"18191322821"
+            };
+            document.getElementById("jname").innerHTML=JOSNobject.name;
+            document.getElementById("jage").innerHTML=JOSNobject.age;
+            document.getElementById("jaddress").innerHTML=JOSNobject.address;
+            document.getElementById("jphone").innerHTML=JOSNobject.phone;
+        </script>
+    </body>
+</html>
