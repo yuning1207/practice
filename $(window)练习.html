@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset=" utf-8"> 
+<meta name="author" content="http://www.softwhy.com/" /> 
+<title>蚂蚁部落</title>
+<script type="text/javascript" src="http://www.softwhy.com/mytest/jQuery/jquery-1.8.3.js"></script> 
+<script type="text/javascript">  
+var minSize = { width: 800, height: 600 };
+$(window).resize( minSize, function(event){
+    var min = event.data;
+    var $dom = $(this);
+    if( $dom.width() < min.width ){
+        $("body").append("<br>窗口宽度不要小于" + min.width );
+    }else if( $dom.height() < min.height ){
+        $("body").append("<br>窗口高度不要小于" + min.height);
+    }
+} );
+</script>  
+</head>  
+<body>
+</body>  
+</html>

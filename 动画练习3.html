@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>list</title>
+    </head>
+    <style type="text/css">
+        #slideshow
+        {
+            width:100px;
+            height:100px;
+        }
+    </style>
+    <body>
+        <h1>web design</h1>
+        <p>these are the things you should know</p>
+        <ol id="linklist">
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="index.html">index</a></li>
+            <li><a href="search.html">search</a></li>
+        </ol>
+        <div id="slideshow">
+        </div>
+        <script type="text/javascript">
+            function newmove()
+            {
+                if(!document.getElementsByTagName)
+                    return 0;
+                if(!document.getElementsByTagName("a"))
+                    return 0;
+                var links=document.getElementsByTagName("a");
+                var divs=document.getElementById("slideshow");
+                divs.style.background='url(59.jpg) '+'no-repeat';
+                var destination;
+                for(var i=0;i<links.length;i++)
+                {
+                    links[i].onmouseover=function()
+                    {
+                        destination=this.getAttribute("href");
+                        if(destination.indexOf("contact.html")!=-1)
+                            divs.style.background='url(59.jpg) '+ -100+'px '+'no-repeat'; 
+                        if(destination.indexOf("index.html")!=-1)
+                            divs.style.background='url(59.jpg) '+ -200+'px '+'no-repeat';
+                        if(destination.indexOf("search.html")!=-1)
+                            divs.style.background='url(59.jpg) '+ -300+'px '+'no-repeat';
+                    }
+                }
+            }
+            window.onload=newmove;
+        </script>
+    </body>
+</html>
