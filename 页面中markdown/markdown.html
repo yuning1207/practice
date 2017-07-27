@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <body>
+
+<body>
+
     <head>
         <meta charset="utf-8">
         <title>markdown编辑器</title>
     </head>
     <header>
-        <h1>请在这里输入markdown格式~</h1>     
+        <h1>请在这里输入markdown格式~</h1>
     </header>
-    <textarea id="text-input" oninput="this.editor.update()"
-              rows="6" cols="60">
+    <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="60">
     </textarea>
     <div id="preview"> </div>
     <script src="markdown.js"></script>
     <script>
-      function Editor(input, preview) {
-        this.update = function () {
-          preview.innerHTML = markdown.toHTML(input.value);
+        function Editor(input, preview) {
+            this.update = function() {
+                preview.innerHTML = markdown.toHTML(input.value);
+            };
+            input.editor = this;
+            this.update();
+        }
+        var $ = function(id) {
+            return document.getElementById(id);
         };
-        input.editor = this;
-        this.update();
-      }
-      var $ = function (id) { return document.getElementById(id); };
-      new Editor($("text-input"), $("preview"));
+        new Editor($("text-input"), $("preview"));
     </script>
-  </body>
+</body>
+
 </html>
