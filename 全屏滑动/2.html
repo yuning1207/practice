@@ -112,6 +112,12 @@
                 scrollto(sindex);
             }
         });
+        //感知浏览器窗口大小调整
+        window.onresize = function() {
+            var i = main.style.top.slice(0, -2) / sHeight;
+            sHeight = document.querySelector('.a').clientHeight;
+            main.style.top = i * sHeight + 'px';
+        }
     </script>
 </body>
 
