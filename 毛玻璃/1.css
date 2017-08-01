@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#github {
+    background: url("github.jpg");
+}
+
+#salon {
+    background: url("salon.jpg");
+}
+
+#project {
+    background: url("project.jpg");
+}
+
+#github::before {
+    background: url("github.jpg") no-repeat center;
+}
+
+#salon::before {
+    background: url("salon.jpg") no-repeat center;
+}
+
+#project::before {
+    background: url("project.jpg") no-repeat center;
+}
+
+#github::before,
+#salon::before,
+#project::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    filter: blur(20px);
+    -webkit-filter: blur(10px);
+    /* Chrome, Safari, Opera */
+    margin: 20px;
+}
+
+.row {
+    width: 100%;
+    padding: 0;
+}
+
+#github,
+#salon,
+#project {
+    height: 250px;
+    width: 250px;
+}
+
+#github {
+    margin: 80px 0px 80px 150px;
+}
+
+#salon {
+    margin: 80px 150px;
+}
+
+#project {
+    margin: 80px 135px 80px 0px;
+}
+
+.main {
+    height: 200px;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+    position: relative;
+    background: hsla(0, 0%, 100%, .3);
+    overflow: hidden;
+}
+
+.main a {
+    color: black;
+}
+
+.main li {
+    margin: 10px 0;
+}
+
+.main p {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    #project {
+        margin-left: 150px;
+    }
+}

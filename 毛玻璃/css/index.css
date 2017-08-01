@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, '微软雅黑';
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+}
+
+header .navbar-default .navbar-brand {
+    font-family: 'Ruda', sans-serif;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+header .navbar-default .navbar-nav>li>a {
+    font-family: "Lato", "Heiti SC", "Hiragino Sans GB", "STHeiti", "Source Han Sans CN", "WenQuanYi Zen Hei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    display: block;
+    padding: 10px 0;
+    line-height: 20px;
+    margin: 10px 20px;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.top_nav_collapse {
+    background-color: #323436;
+}
+
+.top_nav_collapse ul.nav li a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #B0B0B0;
+    margin: 0 20px;
+    border-bottom: none;
+}
+
+.top_nav_collapse ul.nav li a:hover {
+    color: white;
+    border-bottom: none;
+}
+
+.top_nav_collapse ul.nav #in a:hover {
+    color: white;
+    border-bottom: none;
+}
+
+.top_nav_collapse ul.nav #in {
+    background-color: #686868;
+}
+
+.top_nav_collapse ul.nav #in a {
+    border-bottom: none;
+}
+
+.top_nav_collapse #head {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #B0B0B0;
+    height: 100%;
+    padding: 5px 15px;
+    font-size: 25px;
+    color: white;
+}
+
+.top_nav_collapse {
+    min-height: 0px;
+}
+
+#in {
+    background-color: #E0E0E0;
+}
+
+#in>a {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+#in a:hover {
+    color: #0dc5a0;
+    border-bottom: 1px solid #0dc5a0;
+}
+
+.navbar .navbar-nav>li>a:hover {
+    color: #0dc5a0;
+    border-bottom: 1px solid #0dc5a0;
+}
+
+header .navbar {
+    margin-bottom: 0px;
+}
+
+header .navbar-brand {
+    line-height: 30px;
+}
+
+header .navbar-nav>li {
+    line-height: 30px;
+}
+
+.item {
+    height: calc(100vh - 10px);
+}
+
+.carousel .item img {
+    height: auto;
+}
+
+.down-arrow {
+    position: absolute;
+    width: 43px;
+    height: 28px;
+    left: 47.5%;
+    bottom: 20px;
+}
+
+.carousel-caption {
+    vertical-align: middle;
+    top: 35%;
+    font-size: 20px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbar-fixed-top {
+    border-width: 0 0 1px 0;
+}
+
+.carousel-caption p {
+    font-size: 25px;
+}
+
+#slide {
+    height: 28px;
+    width: 43px;
+}
+
+#about {
+    position: relative;
+    width: 100%;
+}
+
+#active {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #0dc5a0;
+}
+
+#contact {
+    width: 100%;
+    position: relative;
+}
+
+#top {
+    display: none;
+    padding-top: 10px;
+    right: 20px;
+    bottom: 15px;
+    position: fixed;
+    color: #bfbfbf;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.next {
+    background: url(../picture/index-next.jpg);
+    height: 27px;
+    left: 50%;
+    margin-left: -40px;
+    position: absolute;
+    top: 0px;
+    width: 80px;
+}
+
+.index_text {
+    text-align: center;
+    line-height: 30px;
+    margin-top: 0px;
+    padding-top: 40px;
+    margin-bottom: -20px;
+    font-family: arial, "微软雅黑", "Microsoft YaHei";
+}
+
+#active .index_text {
+    text-align: center;
+    line-height: 30px;
+    padding-top: 80px;
+    margin-bottom: -20px;
+    color: white;
+}
+
+#active .text_center {
+    font-weight: 500;
+}
+
+.index_text h1 {
+    letter-spacing: 1px;
+}
+
+.text_center {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.intro {
+    padding: 50px 150px;
+}
+
+#嵌入式 {
+    background-color: #3498db;
+    height: 35px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #888888;
+    border-radius: 3px;
+    color: white;
+}
+
+#大数据 {
+    background-color: #7e57c2;
+    height: 35px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #888888;
+    border-radius: 3px;
+    color: white;
+}
+
+#android {
+    background-color: #0dc5a0;
+    height: 35px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #888888;
+    border-radius: 3px;
+    color: white;
+}
+
+#web {
+    background-color: #FF6600;
+    height: 35px;
+    margin-top: 20px;
+    box-shadow: 1px 1px 8px #888888;
+    border-radius: 3px;
+    color: white;
+}
+
+#嵌入式1,
+#大数据1,
+#android1,
+#web1 {
+    margin: 0px;
+    height: 96px;
+    width: 96px;
+}
+
+.img1 {
+    padding: 40px;
+}
+
+#嵌入式1 {
+    background-image: url(../picture/index-嵌入式.png);
+}
+
+#大数据1 {
+    background-image: url(../picture/index-大数据.png);
+}
+
+#android1 {
+    background-image: url(../picture/index-android.png);
+}
+
+#web1 {
+    background-image: url(../picture/index-h5.png);
+}
+
+.text {
+    border-radius: 10px;
+    background-color: #D0D0D0;
+    height: 100px;
+}
+
+.img {
+    padding: 5px 0;
+}
+
+#github {
+    background: url(../picture/github.jpg);
+}
+
+#salon {
+    background: url(../picture/salon.jpg);
+}
+
+#project {
+    background: url(../picture/project.jpg);
+}
+
+.row {
+    margin: 0;
+}
+
+#active .row {
+    margin: 100px 220px;
+}
+
+.active_img {
+    height: 200px;
+    width: 200px;
+    margin: 0 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px #888888;
+}
+
+.onmouse_slide {
+    position: relative;
+}
+
+.active_content {
+    font-size: 14px;
+    margin: 0 55px;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    display: none;
+    color: black;
+}
+
+.active_content p {
+    margin: 10px 0px 5px 40px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.active_content li a {
+    display: block;
+    font-weight: 400;
+    margin: 10px -3px;
+    color: black;
+}
+
+.active_content li {
+    font-weight: 400;
+    padding: 0 5px;
+}
+
+.active_content ul {
+    font-weight: 400;
+    margin: 0 25px;
+}
+
+.active_content {
+    color: black;
+}
+
+#contact .row {
+    padding: 15vh 20vh;
+}
+
+#contact .row h2 {
+    color: #0dc5a0;
+    font-weight: 400;
+    display: inline;
+}
+
+.form-inline {
+    margin: 3vh 0 0 0;
+}
+
+#contact .row h3 {
+    color: #0dc5a0;
+    font-weight: 400;
+    padding: 1vh 0 1vh 0;
+}
+
+#contact .row p {
+    font: 2.3vh/5vh "微软雅黑";
+    border-bottom: 1px dashed black;
+    margin: 2vh 0;
+}
+
+#contact .row textarea {
+    display: block;
+    border-radius: 5px;
+    margin: 2vh 0;
+}
+
+#contact .row input {
+    border-radius: 2px;
+    margin: 2vh 9vh 2vh 0;
+}
+
+.contact_qa {
+    padding-left: 15vh;
+}
+
+#contact #target a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    float: left;
+    height: 5vh;
+    width: 30vh;
+}
+
+#contact #target a:hover {
+    text-decoration: underline;
+    color: #0dc5a0;
+}
+
+#contact img {
+    float: right;
+    position: absolute;
+    top: -1vh;
+}
+
+#建议 {
+    right: 19vh;
+}
+
+#爱心 {
+    right: 3vh;
+}
+
+#contact {
+    height: 75vh;
+    position: relative;
+}
+
+.footer {
+    padding: 2vh 0vh;
+    width: 100%;
+    background-color: #323436;
+    color: #B0B0B0;
+    font-size: 13px;
+}
+
+.footer a {
+    color: #D0D0D0;
+}
+
+.footer a:hover {
+    color: #0dc5a0;
+}
+
+.footer .footer_last {
+    text-align: center;
+    margin: 3vh auto;
+}
+
+#qq {
+    background: url(../picture/qq.png);
+}
+
+#qq img,
+#微信 img {
+    height: 70px;
+    width: 70px;
+    margin-top: 5vh;
+    display: none;
+}
+
+#qq:hover img,
+#微信:hover img {
+    display: block;
+}
+
+#微信 {
+    background: url(../picture/微信.png);
+}
+
+#footer-github {
+    background: url(../picture/github.png);
+}
+
+#net ul {
+    list-style-type: none;
+    margin: -2vh 0 0 9vh;
+}
+
+#net {
+    margin: 0 0 0 -8vh;
+}
+
+#net li {
+    margin: 0 1vh;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+
+/*只在小屏幕显示*/
+
+@media screen and (max-width:768px) {
+    #guide .container {
+        width: 100%;
+    }
+    .carousel .item img {
+        height: 250px;
+    }
+    .carousel-caption h1 {
+        font-size: 14px;
+    }
+    .carousel-caption p {
+        font-size: 14px;
+    }
+    .carousel-caption {
+        top: 10%;
+        font-size: 14px;
+    }
+    .carousel-control.right {
+        height: 250px;
+    }
+    .carousel-control.left {
+        height: 250px;
+    }
+    #head {
+        font-size: 25px;
+    }
+    .intro {
+        padding: 50px 50px;
+    }
+}
