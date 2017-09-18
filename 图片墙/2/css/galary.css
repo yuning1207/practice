@@ -1,0 +1,93 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner {
+    margin-top: -40px;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+    background-image: url(http://images.forwallpaper.com/files/thumbs/preview/20/205186__photo-close-up-snow-leaves-blur-bokeh-background-wallpaper_p.jpg);
+}
+
+.banner h1 {
+    font-size: 8.6em;
+    font-weight: bold;
+    color: white;
+    font-family: "Zeyada";
+    padding-top: 150px;
+}
+
+.banner h2 {
+    font-size: 3.3em;
+    color: white;
+    text-align: center;
+    font-family: "Zeyada";
+    margin-top: 20px;
+}
+
+.figure-item {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.figure-item img {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.figure-item figcaption {
+    height: 250px;
+    position: absolute;
+    width: 100%;
+    background: url(http://gridelicious.net/themes/treble/demo/assets/images/css/thumb_over.png) no-repeat center 150px black;
+    top: 0;
+    left: -250px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.figure-item:hover figcaption {
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+}
+
+.form-section {
+    background-image: url(http://images.forwallpaper.com/files/thumbs/preview/20/205186__photo-close-up-snow-leaves-blur-bokeh-background-wallpaper_p.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 30px;
+}
+
+.form-section h1 {
+    color: white;
+    font-size: 8.5em;
+}
+
+.form-section form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.form-section form input {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-section form textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.form-section form button {
+    display: block;
+    width: 100%;
+}
