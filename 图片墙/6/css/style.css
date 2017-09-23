@@ -9,13 +9,15 @@ body {
 
 .main {
     margin: 50px auto;
-    width: 500px;
+    width: 760px;
 }
 
 ul {
     display: inline-block;
     list-style: none;
     position: relative;
+    height: 305px;
+    background: url(../img/loader.gif) no-repeat center;
 }
 
 li {
@@ -23,38 +25,61 @@ li {
     list-style: none;
     float: left;
     margin: 1px 1px 0px 0px;
+    height: 75px;
+    width: 75px;
+}
+
+.you {
+    width: 151px;
+    height: 151px;
+}
+
+.all>img {
+    width: 75px;
+    height: 75px;
+    z-index: 100;
 }
 
 .all {
     display: inline-block;
-    transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
 }
 
 .content {
-    display: none;
-    position: absolute;
-    background-color: green;
+    visibility: hidden;
+    background-color: #4bae41;
+    transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
     -moz-box-shadow: 0 0 10px #000000;
     -webkit-box-shadow: 0 0 10px #000000;
     box-shadow: 0 0 10px #000000;
+    position: absolute;
+    width: 200px;
 }
 
 .all strong {
-    display: block;
     color: #FFFFFF;
-    font-size: 12px;
+    display: block;
+    font-size: 13px;
     line-height: 16px;
     padding: 0px 10px;
     margin-top: 8px;
     white-space: nowrap;
 }
 
+.text {
+    display: inline-block;
+}
+
+.content img {
+    width: 100px;
+    height: 100px;
+}
+
 .all span {
-    display: block;
     color: #FFFFFF;
+    display: block;
     font-size: 12px;
     line-height: 16px;
     padding: 0px 10px;
@@ -63,31 +88,58 @@ li {
 }
 
 li:hover .content {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    visibility: visible;
+    z-index: 101;
+    width: 300px;
+    top: 1px;
 }
 
-.img {
-    border: 0px;
-    border: none;
-    width: 50px;
-    height: 50px;
-    transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+li:hover .col-2 {
+    top: 77px;
 }
 
-li:hover img {
-    width: 100px;
-    width: 100px;
+li:hover .col-3 {
+    top: 153px;
 }
 
-li:hover>.all {
-    background-color: green;
-    color: white;
-    border: 1px;
+li:hover .col-4 {
+    top: 200px;
+}
+
+.right-1 .text,
+.right-2 .text,
+.right-3 .text,
+.right-1>img,
+.right-2>img,
+.right-3>img {
+    float: right;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+
+li:hover .right-1 {
+    right: 153px;
+}
+
+li:hover .right-2 {
+    right: 77px;
+}
+
+li:hover .right-3 {
+    right: 1px;
+}
+
+li:hover .content>img {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: -3px;
+}
+
+.you {
+    float: right;
+}
+
+.you img {
+    height: 150px;
+    width: 150px;
 }
