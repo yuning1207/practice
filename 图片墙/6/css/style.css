@@ -17,7 +17,20 @@ ul {
     list-style: none;
     position: relative;
     height: 305px;
+    z-index: 99;
     background: url(../img/loader.gif) no-repeat center;
+}
+
+#black {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0.5;
+    z-index: 100;
+    /* display: inline; */
+}
+
+li:hover #black {
+    visibility: visible;
 }
 
 li {
@@ -37,7 +50,7 @@ li {
 .all>img {
     width: 75px;
     height: 75px;
-    z-index: 100;
+    /* z-index: 100; */
 }
 
 .all {
