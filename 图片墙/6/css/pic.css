@@ -7,33 +7,51 @@ body {
     font: 12px/1.5em Arial, Tahoma, Helvetica, snas-serif;
 }
 
-.main {
+#pic.main {
     margin: 50px auto;
     width: 760px;
 }
 
-ul {
+#pic ul {
     display: inline-block;
     list-style: none;
     position: relative;
     height: 305px;
     z-index: 99;
-    background: url(../img/loader.gif) no-repeat center;
 }
 
-#black {
+#load {
+    left: 50%;
+    top: 50%;
+}
+
+.black,
+.black-1,
+.black-2,
+.black-3 {
     position: absolute;
     visibility: hidden;
     opacity: 0.5;
     z-index: 100;
-    /* display: inline; */
 }
 
-li:hover #black {
-    visibility: visible;
+.black {
+    top: 1px;
 }
 
-li {
+.black-1 {
+    top: 77px;
+}
+
+.black-2 {
+    top: 153px;
+}
+
+.black-3 {
+    top: 229px;
+}
+
+#pic li {
     display: inline;
     list-style: none;
     float: left;
@@ -42,22 +60,22 @@ li {
     width: 75px;
 }
 
-.you {
+#pic .you {
     width: 151px;
     height: 151px;
 }
 
-.all>img {
+#pic .all>img {
     width: 75px;
     height: 75px;
     /* z-index: 100; */
 }
 
-.all {
+#pic .all {
     display: inline-block;
 }
 
-.content {
+#pic .content {
     visibility: hidden;
     background-color: #4bae41;
     transition: width 0.5s ease-in-out;
@@ -69,9 +87,10 @@ li {
     box-shadow: 0 0 10px #000000;
     position: absolute;
     width: 200px;
+    z-index: 999;
 }
 
-.all strong {
+#pic .all strong {
     color: #FFFFFF;
     display: block;
     font-size: 13px;
@@ -81,16 +100,16 @@ li {
     white-space: nowrap;
 }
 
-.text {
+#pic .text {
     display: inline-block;
 }
 
-.content img {
+#pic .content img {
     width: 100px;
     height: 100px;
 }
 
-.all span {
+#pic .all span {
     color: #FFFFFF;
     display: block;
     font-size: 12px;
@@ -100,22 +119,22 @@ li {
     white-space: nowrap;
 }
 
-li:hover .content {
+#pic li:hover .content {
     visibility: visible;
-    z-index: 101;
+    z-index: 999;
     width: 300px;
     top: 1px;
 }
 
-li:hover .col-2 {
+#pic li:hover .col-2 {
     top: 77px;
 }
 
-li:hover .col-3 {
+#pic li:hover .col-3 {
     top: 153px;
 }
 
-li:hover .col-4 {
+#pic li:hover .col-4 {
     top: 200px;
 }
 
@@ -130,29 +149,29 @@ li:hover .col-4 {
     margin-right: 2px;
 }
 
-li:hover .right-1 {
+#pic li:hover .right-1 {
     right: 153px;
 }
 
-li:hover .right-2 {
+#pic li:hover .right-2 {
     right: 77px;
 }
 
-li:hover .right-3 {
+#pic li:hover .right-3 {
     right: 1px;
 }
 
-li:hover .content>img {
+#pic li:hover .content>img {
     margin-top: 2px;
     margin-left: 2px;
     margin-bottom: -3px;
 }
 
-.you {
+#pic .you {
     float: right;
 }
 
-.you img {
+#pic .you img {
     height: 150px;
     width: 150px;
 }
