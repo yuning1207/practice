@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>判断对象类型</title>
+</head>
+
+<body>
+    <script>
+        //学自https://www.cnblogs.com/flyjs/archive/2012/02/20/2360504.html
+        var is = {
+            types: ["Array", "Boolean", "Date", "Number", "Object", "RegExp", "String", "Window", "HTMLDocument"]
+        };
+        for (var i = 0, c; c = is.types[i]; i++) {
+            is[c] = (function(c) {
+                return function(obj) {
+                    return Object.prototype.toString.call(obj) == "[object " + c + "]";
+                }
+            })(c);
+        }
+        alert(is.Array([])); // true
+        alert(is.Date(new Date)); // true
+        alert(is.RegExp(/reg/ig)); // true
+    </script>
+</body>
+
+</html>

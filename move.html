@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>动画</title>
+</head>
+
+<body>
+    <div id="move">-></div>
+    <script>
+        var move = document.getElementById("move");
+        move.style.position = "absolute";
+        move.style.left = "100px";
+        //while (1) {
+        x = parseInt(move.style.left);
+
+
+        var timer0 = setInterval(function() {
+            var timer = setInterval(function() {
+                if (x < 300) {
+                    x++;
+                    move.style.left = x + 'px';
+                } else if (x == 300) {
+                    timer = clearInterval(timer);
+                    var timer1 = setInterval(function() {
+                        if (x > 100) {
+                            x--;
+                            move.style.left = x + 'px';
+                        } else if (x == 100) {
+                            timer1 = clearInterval(timer1);
+                        }
+                    }, 10);
+                }
+            }, 10);
+
+        }, 4000);
+    </script>
+</body>
+
+</html>

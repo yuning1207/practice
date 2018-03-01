@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>vue练习</title>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel=stylesheet>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <h2>
+            {{title}} esfhskfhsik
+        </h2>
+        <center>购物车</center>
+        <ul id="head">
+            <li>商品信息</li>
+            <li>商品金额</li>
+            <li>商品数量</li>
+            <li>总金额</li>
+            <li>编辑</li>
+        </ul>
+        <div class="row" v-for="item in list">
+            <div class="col-xs-12 col-md-4">
+                <input type="radio" v-on:click=check(event)>
+                <img v-bind:src="item.productImage">
+                <p>名称：{{item.productName}}
+                    <b>赠送：</b>
+                    <span v-for="part in item.parts">{{part.partsName}} </span>
+                </p>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <p>单价：{{item.productPrice | formatMoney}}</p>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <P>
+                    <a v-on:click=changemoney(item,-1)>- </a>
+                    <input type="text" v-model="item.productQuentity">
+                    <a @click=changemoney(item,1)>+</a>
+                </P>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <p>总金额：{{item.productPrice*item.productQuentity | money '元'}}</p>
+            </div>
+            <div class="col-xs-3 col-md-2">
+                <p>编辑：</p>
+            </div>
+        </div>
+        <div class="footer"><input type="radio"><a>全选 </a><a> 取消全选</a></div>
+        <p>总额：{{totalMoney}}</p>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/vue-resource/1.4.0/vue-resource.js"></script> -->
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

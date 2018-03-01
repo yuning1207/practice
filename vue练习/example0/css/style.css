@@ -1,0 +1,52 @@
+#head {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#head li {
+    display: inline-block;
+    margin: 20px 7%;
+}
+
+.row img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.row p {
+    display: inline-block;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.row p b {
+    display: block;
+}
+
+.row input {
+    width: 12%;
+    padding-left: 5px;
+}
+
+.footer {
+    margin: 20px 20px;
+}
+
+.footer input {
+    margin-right: 15px;
+}
+
+.footer a {
+    margin-right: 15px;
+}
