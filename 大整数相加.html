@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <head>
+        大整数相加
+    </head>
+
+    <body>
+        <script>
+            function add(a, b) {
+                var stra, strb, numa, numb, result = [],
+                    max = [],
+                    min = [];
+                stra = a.split('');
+                strb = b.split('');
+                numa = stra.length;
+                numb = strb.length;
+                if (numa > numb) {
+                    max = stra;
+                    min = strb;
+                } else {
+                    max = strb;
+                    min = stra;
+                }
+                while (max.length > min.length) {
+                    min.unshift('0');
+                }
+                var lenmin = min.length;
+                var lenmax = max.length;
+                var yu;
+
+                for (var i = 1; i <= lenmin; i++) {
+                    var ad = parseInt(max[lenmax - i]) + parseInt(min[lenmin - i]);
+
+                    if (ad >= 10) {
+                        yu = ad % 10;
+                        max[lenmax - i] = yu;
+                        console.log(yu);
+                        if (i == lenmax) {
+                            max.unshift('1');
+                        } else {
+                            max[lenmax - i - 1] = parseInt(max[lenmax - i - 1]) + 1;
+                        }
+
+                    } else {
+                        max[lenmax - i] = ad;
+                    }
+                }
+                console.log(max.join(''));
+            }
+            add('999', '1');
+        </script>
+    </body>
+</head>
+
+</html>

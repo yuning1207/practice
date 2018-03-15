@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>数组去重</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script type="text/javascript">
+        function a1() {
+            var str = [1, 2, 4, 3, 2, 0];
+            var c = [];
+            c = str.filter(function(item, index, array) {
+                if (array.indexOf(item) === index) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            console.log(c);
+        }
+
+        function a2() {
+            var str = new Set([1, 2, 4, 3, 2, 0]);
+            console.log(str);
+        }
+        a2();
+    </script>
+</body>
+
+</html>

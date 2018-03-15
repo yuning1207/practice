@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>鼠标移动</title>
+    <style>
+        #box {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="left:0;top:0"></div>
+    <script>
+        var box;
+        var x, y;
+        document.getElementById('box').onmousedown = function(e) {
+            box = this;
+            e = e || event;
+            x = e.clientX - parseInt(box.style.left);
+            y = e.clientY - parseInt(box.style.top);
+        }
+        document.onmousemove = function(e) {
+            if (!box) {
+                return;
+            }
+            e = e || event;
+            box.style.left = e.clientX - x + 'px';
+            if (parseInt(box.style.left) < 0) {
+                box.style.left = 0;
+            }
+            if (parseInt(box.style.right) < 0) {
+                box.style.right = 0;
+            }
+
+            box.style.top = e.clientY - y + 'px';
+            if (parseInt(box.style.top) < 0) {
+                box.style.top = 0;
+            }
+            if (parseInt(box.style.bottom) < 0) {
+                box.style.bottom = 0;
+            }
+        }
+        document.onmouseup = function(e) {
+            box = '';
+        }
+    </script>
+</body>
+
+</html>
