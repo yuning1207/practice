@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>class</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        class Point {
+            constructor(y) {
+                //this.x = x;
+                this.y = y;
+            }
+            toString() {
+                this.x = '共有'
+                return this.x;
+            }
+        }
+        var a1 = new Point(2);
+        var a2 = new Point(5);
+        a1._prop_.x = 'gong';
+        // a1.x = 3;
+        alert('a1:' + a1.x);
+        alert('a1:' + a1.toString());
+        alert('a2:' + a2.x);
+        alert('a2:' + a2.toString());
+    </script>
+</body>
+
+</html>

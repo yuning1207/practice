@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>typeof</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var ab = function() {
+            var a = 1;
+            return a;
+        };
+
+        function type_of() {
+            console.log(typeof 0);
+            console.log(typeof NaN);
+            console.log(typeof null);
+            console.log(typeof ab);
+            console.log(typeof ab());
+            console.log(typeof undefined);
+            console.log((typeof undefined) == undefined);
+            console.log(typeof [1, 2]);
+            console.log(typeof 'abc');
+            console.log((typeof null) == 'object');
+            console.log('null'.toString());
+            console.log([1, 2].toString());
+            var toString = Object.prototype.toString;
+            console.log(toString.call(null));
+            //var s = Symbol('foo');
+            //console.log(typeof s);
+            console.log(typeof document.getElementById(''));
+            console.log(typeof /\w/);
+        };
+
+        function lei2() {
+            var person = {
+                name: 'mary',
+                getname: function() {
+                    return this.name;
+                }
+            };
+            var person1 = Object.create(person);
+            var person2 = Object.create(person);
+            person1.name = 'tom';
+            console.log(person1.name);
+            console.log(person2.name);
+        }
+        lei2();
+
+        function lei3() {
+            var dog = {
+                age: 5,
+                createFn: function() {
+                    var dog = {};
+                    dog.name = '狗';
+                    dog.age = this.age;
+                    dog.make = function() {
+                        alert(this.age + '汪');
+                    }
+                    return dog;
+                }
+            };
+            var dog1 = dog.createFn();
+            var dog2 = dog.createFn();
+            dog1.name = '猫';
+            console.log(dog1.name);
+            console.log(dog2.name);
+            console.log(dog1.age);
+
+        }
+        //lei2();
+        lei3();
+    </script>
+</body>
+
+</html>

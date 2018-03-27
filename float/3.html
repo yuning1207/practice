@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>1</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="3.js"></script>
+    <script type="text/javascript" src="4.js"></script>
+    <script type="text/javascript" src="5.js"></script>
+</head>
+
+<body>
+    <div style="height:1px;background:red"></div>
+    <div style="height:50px;background-color:aqua"></div>
+    <div id="fu">
+        <p>1505</p>
+        <p>计科</p>
+        <!-- <div style="clear:both"></div> -->
+        <!-- <br clear="all"> -->
+        <div id="dong"></div>
+    </div>
+    <nav>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </nav>
+    <div id="xu"></div>
+    <div id="an"></div>
+
+
+    <script>
+        function a() {
+            console.log(1);
+            setTimeout(function() {
+                console.log(2);
+            }, 0);
+            console.log(3);
+            console.log(4);
+        }
+
+        function b() {
+            setTimeout(function() {
+                console.log("定时器开始啦");
+            });
+            new Promise(function(resolve) {
+                console.log("要开始for循环啦");
+                for (let i = 0; i < 1000; i++) {
+                    i == 99 && resolve();
+                }
+            }).then(function() {
+                console.log("执行then函数");
+            });
+            console.log("代码结束");
+        }
+        //b();
+        //alert(document.domain);
+    </script>
+</body>
+
+</html>
