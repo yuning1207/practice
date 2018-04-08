@@ -5,16 +5,73 @@
     <title>同心圆</title>
     <meta charset="utf-8">
     <style>
-        div {
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        div:nth-of-type(1) {
             width: 100px;
             height: 100px;
             background-color: red;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        div:nth-of-type(1)::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            position: absolute;
+            top: 45px;
+            left: 45px;
+            border-radius: 50%;
+        }
+        
+        div:nth-of-type(1)::before::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;
+            top: 75px;
+            left: 75px;
+            border-radius: 50%;
+        }
+        
+        div:nth-of-type(2) {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+        }
+        
+        div:nth-of-type(3) {
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            margin: 0px 0 0 0px;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 0 10px red, 0 0 0 20px green;
+        }
+        
+        .text {
+            width: 200px;
+            height: 200px;
+            background: repeating-radial-gradient(red 5%, yellow 10%);
+            background: -webkit-repeating-radial-gradient(red 5%, yellow 10%);
         }
     </style>
 </head>
 
 <body>
     <div></div>
+    <div>1</div>
+    <div></div>
+    <div class="text"></div>
     <script>
     </script>
 </body>
