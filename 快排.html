@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function qsort(list) {
+            if (list.length == 0) {
+                return [];
+            }
+            var t = list[0];
+            var i = 1;
+            var left = [];
+            var right = [];
+            for (i; i < list.length; i++) {
+                if (list[i] < t) {
+                    left.push(list[i]);
+                } else {
+                    right.push(list[i]);
+                }
+            }
+            return qsort(left).concat(t, qsort(right));
+        }
+        var a = [];
+        var i = 0;
+        for (var i; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 100);
+        }
+        console.log(a);
+        var sorta = qsort(a);
+        console.log(sorta);
+    </script>
+</body>
+
+</html>

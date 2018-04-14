@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function shallowcopy(obj) {
+            var result = {};
+            for (var prop in obj) {
+                // if (obj.hasOwnProperty(prop)) {
+                result[prop] = obj[prop];
+                // }
+            }
+            return result;
+        }
+
+        function deepcopy(obj) {
+            var result = obj.constructor === Array ? [] : {};
+            if (typeof obj !== 'object') {
+                return;
+            } else if (window.JSON) {
+                var str = JSON.stringify(obj);
+                var result = JSON.parse(str);
+            } else {
+                for (var prop in obj) {
+                    if ((typeof obj[prop]) !== 'object') {
+                        result[prop] = obj[prop];
+                    } else {
+                        deepcopy(obj[prop]);
+                    }
+                }
+            }
+            return result;
+        }
+        var a = {
+            a: 1,
+            arr: [1, 2]
+        };
+        var sha = shallowcopy(a);
+        var deep = deepcopy(a);
+        console.log(a);
+        a.arr[0] = 5;
+        console.log(sha);
+        console.log(deep);
+    </script>
+</body>
+
+</html>
