@@ -13,9 +13,9 @@
         function shallowcopy(obj) {
             var result = {};
             for (var prop in obj) {
-                // if (obj.hasOwnProperty(prop)) {
+                if (obj.hasOwnProperty(prop)) {
                 result[prop] = obj[prop];
-                // }
+                }
             }
             return result;
         }
