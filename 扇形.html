@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>扇形绘制</title>
+    <style>
+        .c {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: yellow;
+        }
+        
+        .sx1 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background-color: black;
+        }
+        
+        .sx2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background-color: black;
+        }
+        
+        .c1 .sx1 {
+            transform: rotate(-30deg);
+        }
+        
+        .c1 .sx2 {
+            transform: rotate(-150deg);
+        }
+        
+        #other {
+            margin-top: -100px;
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .c_2 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: black;
+            transform: translateY(-100px);
+        }
+        
+        .sx1_2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background-color: yellow;
+        }
+        
+        .sx2_2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transform: rotate(0deg);
+            clip: rect(0px, 100px, 200px, 0px);
+            border-radius: 100px;
+            background-color: yellow;
+        }
+        
+        .c_2 .sx1_2 {
+            transform: rotate(30deg);
+        }
+        
+        .c_2 .sx2_2 {
+            transform: rotate(150deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c c1">
+        <div class="sx1"></div>
+        <div class="sx2"></div>
+    </div>
+    <div id="other">
+        <div class="c_2 c2_2">
+            <div class="sx1_2"></div>
+            <div class="sx2_2"></div>
+        </div>
+    </div>
+    <script>
+        function a(arr1, arr2) {
+            var len = arr1.length;
+            var sum = 0;
+            arr1.sort(function(a, b) {
+                return a - b;
+            });
+            arr2.sort(function(a, b) {
+                return b - a;
+            });
+            for (var i = 0; i < len; i++) {
+                sum += arr1[i] * arr2[i];
+            }
+            console.log(sum);
+        }
+        a([1, 2, 3], [1, 2, 3]);
+    </script>
+</body>
+
+</html>
